@@ -5,19 +5,19 @@ public class Hangman {
     private String word;
     private char[] guessedWord;
     private StringBuilder health;
-    private boolean wordGuessed;
+    private static final String[] words = {"Китка", "Делать", "Кусь", "Моей", "Рука"};
 
     public static void main(String[] args) {
         new Hangman().startGame();
     }
 
     public void startGame() {
-        String[] words = {"Китка", "Деалать", "Кусь", "Моей", "Рука"};
+
         Random rand = new Random();
         this.word = words[rand.nextInt(words.length)];
         this.guessedWord = new char[word.length()];
         this.health = new StringBuilder("\u2764\uFE0F\u2764\uFE0F\u2764\uFE0F\u2764\uFE0F");
-        this.wordGuessed = false;
+        boolean wordGuessed = false;
 
         initializeGuessedWord();
         Scanner scanner = new Scanner(System.in);

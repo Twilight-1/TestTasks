@@ -62,7 +62,7 @@ public class Currencies {
 
         System.out.print("Введите сумму: ");
         double amount = scanner.nextDouble();
-        // конвертируем валюты
+        // конвертируем валюту
         double convertedAmount = convertCurrency(amount, fromCurrency, toCurrency);
         System.out.printf("Конвертированная сумма: %.2f %s = %.2f %s\n",
                 amount, fromCurrency, convertedAmount, toCurrency);
